@@ -1,0 +1,11 @@
+version: "3"
+services:
+  rabiscator-dkr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rabiscator-img:latest
+    volumes:
+      - .:/local-folder
+    command: python3 /local-folder/src/run.py
+    container_name: rabiscator-dkr
